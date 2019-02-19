@@ -7,10 +7,10 @@ import Grid from "@material-ui/core/Grid";
 const Group = () => {
     return(
         <Grid container>
-            <Grid item sm style={{ background: "#A9A9A9", padding: 200, marginTop:100, marginLeft: 130}}>
+            <Grid item sm style={{padding: 200}}>
                 <Animation />
             </Grid>
-            <Grid item sm style={{ background: "#B0C4DE", padding: 200, marginTop:100}}> 
+            <Grid item sm style={{padding: 200}}> 
                <FormGroup />
             </Grid>
         </Grid>

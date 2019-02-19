@@ -1,6 +1,4 @@
 import React from "react";
-// import FormFields from "../../Reusable/FormFields";
-//import Validate from "../../Reusable/Validate";
 import Button from "@material-ui/core/Button";
 import Textfield from "@material-ui/core/TextField";
 
@@ -58,34 +56,7 @@ class FormGroup extends React.Component {
         // console.log(dataToSubmit);
         // console.log("STORE DATA TO SERVER")
     }
-    // submitForm(event){
-    //     event.preventDefault();
-        
-    //     let dataToSubmit = this.state;
-    //     console.log(dataToSubmit);
-
-    //     for(let key in this.state){
-    //         // if( key === "groupName"){
-    //         //     dataToSubmit[key] = this.state[key].value;
-    //         // }
-    //         if( key === "members"){
-    //             for(let i=0; i<this.state.members.length; i++){
-    //                 for(let prop in this.state.members[i]){
-    //                     // dataToSubmit[key] = this.state.members[i][prop].value;
-    //                     console.log(this.state.members[i][prop].value);
-    //                 }
-    //             }
-    //          }
-    //     }
-    //     for(let key in this.state.members[0]){
-    //         dataToSubmit[key] = this.state.members[0][key].value;
-    //     }
-    //     SAVE THIS DATA TO FIREBASE   
-    //     console.log(dataToSubmit);
-    //     console.log("STORE DATA TO SERVER")
-    // }
-
-
+ 
     //DO THE TWO UPDATES IN ONE
     updateForm = (event) =>{
         event.preventDefault();
@@ -143,9 +114,13 @@ class FormGroup extends React.Component {
                     </div>
                     <div className="enroll_input">
                         <Textfield
+                            style={{ width: 230}}
                             {...this.state.groupName.config}
                             value={this.state.groupName.value}
-                            onChange={this.updateForm} />
+                            onChange={this.updateForm}
+                            margin="normal"
+                            variant="outlined" 
+                        />
                     </div>
                     <hr></hr>
                     <div>
@@ -154,19 +129,25 @@ class FormGroup extends React.Component {
                     <div>
                         {this.state.members.map((member) => {
                             return (
-                                <div>
+                                <div >
                                     <div>
                                         <Textfield
+                                            style={{ width: 230}}
                                             {...this.state.members[0].name.config}
                                             //value={this.state.members[0].name.value}
                                             onChange={this.updateMembers}
+                                            margin="normal"
+                                            variant="outlined"
                                         />
                                     </div>
                                     <div>
                                         <Textfield
+                                            style={{ width: 230}}
                                             {...this.state.members[0].email.config}
                                             //value={this.state.members[0].email.value}
                                             onChange={this.updateMembers}
+                                            margin="normal"
+                                            variant="outlined"
                                         />
                                     </div>
                                 </div>

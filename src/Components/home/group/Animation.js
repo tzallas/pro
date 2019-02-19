@@ -1,10 +1,11 @@
 import React from "react";
+import { Paper } from "@material-ui/core"
 
 const Animation = () => {
     return(
-        <div >
+        <Paper style={{padding: 20}}>
             LOGO
-        </div>
+        </Paper>
     )
 }
 
